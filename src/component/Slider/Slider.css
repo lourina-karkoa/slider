@@ -1,0 +1,98 @@
+.father {
+    overflow: hidden;
+    padding: 0 50px;
+    width: 100%;
+    position: relative;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.son {
+    min-width: 300px;
+    height: 300px;
+    background-color: brown;
+    margin: 0 15px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.f-circle {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.circle {
+    background-color: brown;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: darkred;
+}
+
+.arrow {
+    background-color: brown;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* شاشات كبيرة */
+@media (min-width: 1024px) {
+    .slider-container {
+        max-width: 1024px;
+    }
+}
+
+/* شاشات متوسطة */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .slider-container {
+        max-width: 768px;
+    }
+    .son {
+        min-width: 360px;
+    }
+}
+
+/* شاشات صغيرة */
+@media (max-width: 767px) {
+    .slider-container {
+        max-width: 360px;
+    }
+    .son {
+        min-width: 360px;
+    }
+}
